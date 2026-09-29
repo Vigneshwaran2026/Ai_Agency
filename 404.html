@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>404 - Page Not Found | Stackly</title>
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <style>
+
+                     html, body {
+    overflow-x: hidden;
+    width: 100%;
+}
+
+
+        :root {
+            --primary: #D032AF;
+            --secondary: #3E5DFF;
+            --dark: #0D1A42;
+            --text: #69728B;
+            --light: #F1F3FF;
+            --white: #FFFFFF;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            min-height: 100vh;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #f1f3ff 0%, #ffffff 50%, #f7efff 100%);
+            color: var(--dark);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+
+        .error-page {
+            width: 100%;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 40px 20px;
+            position: relative;
+        }
+
+        .shape {
+            position: absolute;
+            border-radius: 50%;
+            filter: blur(2px);
+            opacity: 0.12;
+            z-index: 0;
+        }
+
+        .shape-one {
+            width: 280px;
+            height: 280px;
+            background: var(--primary);
+            top: -100px;
+            left: -80px;
+        }
+
+        .shape-two {
+            width: 350px;
+            height: 350px;
+            background: var(--secondary);
+            right: -130px;
+            bottom: -150px;
+        }
+
+        .error-content {
+            max-width: 850px;
+            width: 100%;
+            text-align: center;
+            position: relative;
+            z-index: 1;
+        }
+
+        .logo {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            text-decoration: none;
+            color: var(--dark);
+            font-size: 28px;
+            font-weight: 800;
+            margin-bottom: 35px;
+        }
+
+        .logo-icon {
+            width: 48px;
+            height: 48px;
+            border-radius: 14px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--white);
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            box-shadow: 0 12px 30px rgba(62, 93, 255, 0.22);
+        }
+
+        .error-number {
+            font-size: clamp(120px, 22vw, 260px);
+            line-height: 0.8;
+            font-weight: 900;
+            letter-spacing: -12px;
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 30px;
+        }
+
+        .error-icon {
+            width: 76px;
+            height: 76px;
+            margin: 0 auto 22px;
+            border-radius: 50%;
+            background: var(--white);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--primary);
+            font-size: 30px;
+            box-shadow: 0 15px 45px rgba(13, 26, 66, 0.10);
+        }
+
+        h1 {
+            font-size: clamp(30px, 5vw, 48px);
+            margin-bottom: 14px;
+            font-weight: 800;
+        }
+
+        .description {
+            max-width: 570px;
+            margin: 0 auto 32px;
+            color: var(--text);
+            font-size: 17px;
+            line-height: 1.7;
+        }
+
+        .buttons {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            min-width: 160px;
+            padding: 14px 24px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-size: 15px;
+            font-weight: 700;
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            gap: 9px;
+            transition: 0.3s ease;
+        }
+
+        .btn-primary {
+            color: var(--white);
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            box-shadow: 0 10px 25px rgba(62, 93, 255, 0.20);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 30px rgba(62, 93, 255, 0.28);
+        }
+
+        .btn-outline {
+            color: var(--dark);
+            background: var(--white);
+            border: 1px solid #dfe3f2;
+        }
+
+        .btn-outline:hover {
+            color: var(--primary);
+            border-color: var(--primary);
+            transform: translateY(-3px);
+        }
+
+        .footer-text {
+            margin-top: 45px;
+            color: #9aa2b6;
+            font-size: 13px;
+        }
+
+        @media (max-width: 600px) {
+            .error-page {
+                padding: 30px 18px;
+            }
+
+            .logo {
+                font-size: 24px;
+                margin-bottom: 25px;
+            }
+
+            .logo-icon {
+                width: 42px;
+                height: 42px;
+            }
+
+            .error-number {
+                letter-spacing: -7px;
+                margin-bottom: 25px;
+            }
+
+            .error-icon {
+                width: 64px;
+                height: 64px;
+                font-size: 25px;
+            }
+
+            .description {
+                font-size: 15px;
+            }
+
+            .buttons {
+                flex-direction: column;
+            }
+
+            .btn {
+                width: 100%;
+                max-width: 280px;
+            }
+
+            .footer-text {
+                margin-top: 30px;
+            }
+        }
+
+        .logo img {
+    width: 160px;
+    height: auto;
+    display: block;
+}
+
+    </style>
+</head>
+
+<body>
+
+    <main class="error-page">
+
+        <div class="shape shape-one"></div>
+        <div class="shape shape-two"></div>
+
+        <div class="error-content">
+<a href="index.html" class="logo">
+    <img src="assets/images/logo.webp" alt="Stackly Logo">
+</a>
+
+            <div class="error-number">404</div>
+
+            <div class="error-icon">
+                <i class="fa-solid fa-link-slash"></i>
+            </div>
+
+            <h1>Page Not Found</h1>
+
+            <p class="description">
+                Sorry, the page you are looking for doesn't exist or may have
+                been moved. Please return to the homepage and continue exploring.
+            </p>
+
+            <div class="buttons">
+                <a href="index.html" class="btn btn-primary">
+                    <i class="fa-solid fa-house"></i>
+                    Back to Home
+                </a>
+
+                <a href="javascript:history.back()" class="btn btn-outline">
+                    <i class="fa-solid fa-arrow-left"></i>
+                    Go Back
+                </a>
+            </div>
+
+            <p class="footer-text">
+                © 2026 Stackly. All Rights Reserved.
+            </p>
+
+        </div>
+    </main>
+
+</body>
+</html>
